@@ -8,11 +8,7 @@ For more features and what is supports in detail, you may found it at http://flu
 
 ## How to install
 
-Please go to http://artworx.juplo.com/?module=fluxbb&action=howto#install
-
-## Integrating FluxCP and FluxBB account sessions
-
-You may find the step by step procedure on how to integrate FluxBB with FluxCP at http://artworx.juplo.com/?module=fluxbb&action=howto#integrate_home
+Please refer to https://gitlab.com/carloquilala/fluxbb/wikis/how-to-install
 
 ## Copyright License
 
