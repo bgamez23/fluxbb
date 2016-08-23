@@ -56,7 +56,7 @@ $paging_links = '<span class="pages-label">'.$lang_common['Pages'].' </span>'.pa
 
 define('PUN_ALLOW_INDEX', 1);
 define('PUN_ACTIVE_PAGE', 'userlist');
-require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 ?>
 <div class="blockform">
@@ -177,4 +177,4 @@ else
 </div>
 <?php
 
-require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';

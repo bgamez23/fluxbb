@@ -35,7 +35,7 @@ if ($action == 'check_upgrade')
 
 $page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_admin_common['Admin'], $lang_admin_common['Index']);
 define('PUN_ACTIVE_PAGE', 'admin');
-require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 generate_admin_menu('index');
 
@@ -83,4 +83,4 @@ generate_admin_menu('index');
 </div>
 <?php
 
-require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';

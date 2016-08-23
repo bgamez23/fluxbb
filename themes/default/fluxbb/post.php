@@ -538,7 +538,7 @@ else
 }
 
 define('PUN_ACTIVE_PAGE', 'index');
-require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 ?>
 <div class="linkst">
@@ -757,4 +757,4 @@ if ($tid && $pun_config['o_topic_review'] != '0')
 
 }
 
-require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';

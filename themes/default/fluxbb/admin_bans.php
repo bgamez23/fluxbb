@@ -96,7 +96,7 @@ if (isset($_REQUEST['add_ban']) || isset($_GET['edit_ban']))
 	$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_admin_common['Admin'], $lang_admin_common['Bans']);
 	$focus_element = array('bans2', 'ban_user');
 	define('PUN_ACTIVE_PAGE', 'admin');
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 	generate_admin_menu('bans');
 
@@ -169,7 +169,7 @@ if (isset($_REQUEST['add_ban']) || isset($_GET['edit_ban']))
 </div>
 <?php
 
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 }
 
 // Add/edit a ban (stage 2)
@@ -383,7 +383,7 @@ else if ($params->get('find_ban'))
 
 	$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_admin_common['Admin'], $lang_admin_common['Bans'], $lang_admin_bans['Results head']);
 	define('PUN_ACTIVE_PAGE', 'admin');
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 ?>
 <div class="linkst">
@@ -468,13 +468,13 @@ else if ($params->get('find_ban'))
 </div>
 <?php
 
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 }
 
 $page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_admin_common['Admin'], $lang_admin_common['Bans']);
 $focus_element = array('bans', 'new_ban_user');
 define('PUN_ACTIVE_PAGE', 'admin');
-require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 generate_admin_menu('bans');
 
@@ -564,4 +564,4 @@ generate_admin_menu('bans');
 </div>
 <?php
 
-require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';

@@ -25,7 +25,7 @@ if ($action == 'rules')
 
 	$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_register['Forum rules']);
 	define('PUN_ACTIVE_PAGE', 'rules');
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 ?>
 <div id="rules" class="block">
@@ -38,7 +38,7 @@ if ($action == 'rules')
 </div>
 <?php
 
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 }
 
 
@@ -167,7 +167,7 @@ else if (isset($_GET['email']))
 	$required_fields = array('req_subject' => $lang_misc['Email subject'], 'req_message' => $lang_misc['Email message']);
 	$focus_element = array('email', 'req_subject');
 	define('PUN_ACTIVE_PAGE', 'index');
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 ?>
 <div id="emailform" class="blockform">
@@ -194,7 +194,7 @@ else if (isset($_GET['email']))
 </div>
 <?php
 
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 }
 
 
@@ -283,7 +283,7 @@ else if (isset($_GET['report']))
 	$required_fields = array('req_reason' => $lang_misc['Reason']);
 	$focus_element = array('report', 'req_reason');
 	define('PUN_ACTIVE_PAGE', 'index');
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 ?>
 <div class="linkst">
@@ -316,7 +316,7 @@ else if (isset($_GET['report']))
 </div>
 <?php
 
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 }
 
 

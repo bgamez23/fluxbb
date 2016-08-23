@@ -116,7 +116,7 @@ if ($params->get('tid'))
 
 		$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_misc['Moderate']);
 		define('PUN_ACTIVE_PAGE', 'index');
-		require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+		require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 ?>
 <div class="blockform">
@@ -138,7 +138,7 @@ if ($params->get('tid'))
 </div>
 <?php
 
-		require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+		require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 	}
 	else if (isset($_POST['split_posts']) || isset($_POST['split_posts_comply']))
 	{
@@ -216,7 +216,7 @@ if ($params->get('tid'))
 		$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_misc['Moderate']);
 		$focus_element = array('subject','new_subject');
 		define('PUN_ACTIVE_PAGE', 'index');
-		require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+		require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 ?>
 <div class="blockform">
@@ -262,7 +262,7 @@ if ($params->get('tid'))
 </div>
 <?php
 
-		require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+		require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 	}
 
 
@@ -291,7 +291,7 @@ if ($params->get('tid'))
 
 	$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), pun_htmlspecialchars($cur_topic['forum_name']), pun_htmlspecialchars($cur_topic['subject']));
 	define('PUN_ACTIVE_PAGE', 'index');
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 ?>
 <div class="linkst">
@@ -411,7 +411,7 @@ if ($params->get('tid'))
 </form>
 <?php
 
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 }
 
 
@@ -492,7 +492,7 @@ if (isset($_REQUEST['move_topics']) || isset($_POST['move_topics_to']))
 
 	$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_misc['Moderate']);
 	define('PUN_ACTIVE_PAGE', 'index');
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 ?>
 <div class="blockform">
@@ -540,7 +540,7 @@ if (isset($_REQUEST['move_topics']) || isset($_POST['move_topics_to']))
 </div>
 <?php
 
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 }
 
 // Merge two or more topics
@@ -616,7 +616,7 @@ else if (isset($_POST['merge_topics']) || isset($_POST['merge_topics_comply']))
 
 	$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_misc['Moderate']);
 	define('PUN_ACTIVE_PAGE', 'index');
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 ?>
 <div class="blockform">
@@ -640,7 +640,7 @@ else if (isset($_POST['merge_topics']) || isset($_POST['merge_topics_comply']))
 </div>
 <?php
 
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 }
 
 // Delete one or more topics
@@ -693,7 +693,7 @@ else if (isset($_POST['delete_topics']) || isset($_POST['delete_topics_comply'])
 
 	$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_misc['Moderate']);
 	define('PUN_ACTIVE_PAGE', 'index');
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 ?>
 <div class="blockform">
@@ -715,7 +715,7 @@ else if (isset($_POST['delete_topics']) || isset($_POST['delete_topics_comply'])
 </div>
 <?php
 
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 }
 
 
@@ -828,7 +828,7 @@ $paging_links = '<span class="pages-label">'.$lang_common['Pages'].' </span>'.pa
 
 $page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), pun_htmlspecialchars($cur_forum['forum_name']));
 define('PUN_ACTIVE_PAGE', 'index');
-require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 ?>
 <div class="linkst">
@@ -1000,4 +1000,4 @@ else
 </form>
 <?php
 
-require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';

@@ -169,7 +169,7 @@ $page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), pun_html
 
 define('PUN_ALLOW_INDEX', 1);
 define('PUN_ACTIVE_PAGE', 'index');
-require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 ?>
 <div class="linkst">
@@ -454,4 +454,4 @@ if ($pun_config['o_topic_views'] == '1')
 
 $forum_id = $cur_topic['forum_id'];
 $footer_style = 'viewtopic';
-require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';

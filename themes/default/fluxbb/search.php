@@ -549,7 +549,7 @@ if ($params->get('act') || $params->get('search_id'))
 
 		$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_search['Search results']);
 		define('PUN_ACTIVE_PAGE', 'search');
-		require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+		require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 ?>
 <div class="linkst">
@@ -767,7 +767,7 @@ if ($params->get('act') || $params->get('search_id'))
 </div>
 <?php
 
-		require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+		require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 	}
 	else
 		message($lang_search['No hits']);
@@ -777,7 +777,7 @@ if ($params->get('act') || $params->get('search_id'))
 $page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_search['Search']);
 $focus_element = array('search', 'keywords');
 define('PUN_ACTIVE_PAGE', 'search');
-require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 ?>
 <div id="searchform" class="blockform">
@@ -911,4 +911,4 @@ else
 	</div>
 </div>
 <?php
-require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';

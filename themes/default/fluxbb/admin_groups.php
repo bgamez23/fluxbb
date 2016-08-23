@@ -48,7 +48,7 @@ if (isset($_POST['add_group']) || isset($_GET['edit_group']))
 	$required_fields = array('req_title' => $lang_admin_groups['Group title label']);
 	$focus_element = array('groups2', 'req_title');
 	define('PUN_ACTIVE_PAGE', 'admin');
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 	generate_admin_menu('groups');
 
@@ -281,7 +281,7 @@ foreach ($groups as $cur_group)
 </div>
 <?php
 
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 }
 
 
@@ -439,7 +439,7 @@ else if (isset($_GET['del_group']))
 
 			$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_admin_common['Admin'], $lang_admin_common['User groups']);
 			define('PUN_ACTIVE_PAGE', 'admin');
-			require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+			require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 			generate_admin_menu('groups');
 
@@ -466,7 +466,7 @@ else if (isset($_GET['del_group']))
 </div>
 <?php
 
-			require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+			require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 		}
 	}
 
@@ -474,7 +474,7 @@ else if (isset($_GET['del_group']))
 
 	$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_admin_common['Admin'], $lang_admin_common['User groups']);
 	define('PUN_ACTIVE_PAGE', 'admin');
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 	generate_admin_menu('groups');
 
@@ -516,13 +516,13 @@ else if (isset($_GET['del_group']))
 </div>
 <?php
 
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 }
 
 
 $page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_admin_common['Admin'], $lang_admin_common['User groups']);
 define('PUN_ACTIVE_PAGE', 'admin');
-require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 generate_admin_menu('groups');
 
@@ -624,4 +624,4 @@ foreach ($groups as $cur_group)
 </div>
 <?php
 
-require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';

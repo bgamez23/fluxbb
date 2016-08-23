@@ -75,7 +75,7 @@ if (isset($_POST['delete']))
 
 $page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_delete['Delete post']);
 define ('PUN_ACTIVE_PAGE', 'index');
-require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 require 'addons/fluxbb/data/fluxbb/parser.php';
 $GLOBALS['smilies'] = $smilies;
@@ -132,4 +132,4 @@ $cur_post['message'] = parse_message($cur_post['message'], $cur_post['hide_smili
 </div>
 <?php
 
-require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';

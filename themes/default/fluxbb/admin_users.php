@@ -37,7 +37,7 @@ if (isset($_GET['ip_stats']))
 
 	$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_admin_common['Admin'], $lang_admin_common['Users'], $lang_admin_users['Results head']);
 	define('PUN_ACTIVE_PAGE', 'admin');
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 ?>
 <div class="linkst">
@@ -112,7 +112,7 @@ if (isset($_GET['ip_stats']))
 </div>
 <?php
 
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 }
 
 
@@ -141,7 +141,7 @@ if (isset($_GET['show_users']) || isset($_POST['show_users']))
 
 	$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_admin_common['Admin'], $lang_admin_common['Users'], $lang_admin_users['Results head']);
 	define('PUN_ACTIVE_PAGE', 'admin');
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 ?>
 <div class="linkst">
@@ -256,7 +256,7 @@ if (isset($_GET['show_users']) || isset($_POST['show_users']))
 	</div>
 </div>
 <?php
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 }
 
 
@@ -345,7 +345,7 @@ else if (isset($_POST['move_users']) || isset($_POST['move_users_comply']))
 
 	$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_admin_common['Admin'], $lang_admin_common['Users'], $lang_admin_users['Move users']);
 	define('PUN_ACTIVE_PAGE', 'admin');
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 	generate_admin_menu('users');
 
@@ -382,7 +382,7 @@ else if (isset($_POST['move_users']) || isset($_POST['move_users_comply']))
 </div>
 <?php
 
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 }
 
 
@@ -501,7 +501,7 @@ else if (isset($_POST['delete_users']) || isset($_POST['delete_users_comply']))
 
 	$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_admin_common['Admin'], $lang_admin_common['Users'], $lang_admin_users['Delete users']);
 	define('PUN_ACTIVE_PAGE', 'admin');
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 	generate_admin_menu('users');
 
@@ -531,7 +531,7 @@ else if (isset($_POST['delete_users']) || isset($_POST['delete_users_comply']))
 </div>
 <?php
 
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 }
 
 
@@ -627,7 +627,7 @@ else if (isset($_POST['ban_users']) || isset($_POST['ban_users_comply']))
 	$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_admin_common['Admin'], $lang_admin_common['Bans']);
 	$focus_element = array('bans2', 'ban_message');
 	define('PUN_ACTIVE_PAGE', 'admin');
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 	generate_admin_menu('users');
 
@@ -676,7 +676,7 @@ else if (isset($_POST['ban_users']) || isset($_POST['ban_users_comply']))
 </div>
 <?php
 
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 }
 
 
@@ -860,7 +860,7 @@ else if (isset($_POST['find_user']))
 	$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_admin_common['Admin'], $lang_admin_common['Users'], $lang_admin_users['Results head']);
 	$page_head = array('js' => '<script type="text/javascript" src="addons/fluxbb/data/artworx.common.js"></script>');
 	define('PUN_ACTIVE_PAGE', 'admin');
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 ?>
 <div class="linkst">
@@ -955,7 +955,7 @@ else if (isset($_POST['find_user']))
 </form>
 <?php
 
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 }
 
 
@@ -964,7 +964,7 @@ else
 	$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_admin_common['Admin'], $lang_admin_common['Users']);
 	$focus_element = array('find_user', 'form[username]');
 	define('PUN_ACTIVE_PAGE', 'admin');
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 	generate_admin_menu('users');
 
@@ -1135,5 +1135,5 @@ else
 </div>
 <?php
 
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 }

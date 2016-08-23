@@ -130,7 +130,7 @@ if ($action == 'upload_avatar' || $action == 'upload_avatar2')
 	$required_fields = array('req_file' => $lang_profile['File']);
 	$focus_element = array('upload_avatar', 'req_file');
 	define('PUN_ACTIVE_PAGE', 'profile');
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 ?>
 <div class="blockform">
@@ -154,7 +154,7 @@ if ($action == 'upload_avatar' || $action == 'upload_avatar2')
 </div>
 <?php
 
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 }
 
 
@@ -367,7 +367,7 @@ else if ($params->get('delete_user') || $params->get('delete_user_comply'))
 
 	$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_common['Profile'], $lang_profile['Confirm delete user']);
 	define('PUN_ACTIVE_PAGE', 'profile');
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 ?>
 <div class="blockform">
@@ -392,7 +392,7 @@ else if ($params->get('delete_user') || $params->get('delete_user_comply'))
 </div>
 <?php
 
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 }
 
 
@@ -858,7 +858,7 @@ if ($pun_user['id'] != $id &&																	// If we aren't the user (i.e. edi
 	$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), sprintf($lang_profile['Users profile'], pun_htmlspecialchars($user['username'])));
 	define('PUN_ALLOW_INDEX', 1);
 	define('PUN_ACTIVE_PAGE', 'index');
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 ?>
 <div id="viewprofile" class="block">
@@ -915,7 +915,7 @@ if ($pun_user['id'] != $id &&																	// If we aren't the user (i.e. edi
 
 <?php
 
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 }
 else
 {
@@ -963,7 +963,7 @@ else
 		$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_common['Profile'], $lang_profile['Section essentials']);
 		// $required_fields = array('req_username' => $lang_common['Username'], 'req_email' => $lang_common['Email']);
 		define('PUN_ACTIVE_PAGE', 'profile');
-		require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+		require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 		$page = $params->get('section');
 
 ?>
@@ -1156,7 +1156,7 @@ else
 
 		$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_common['Profile'], $lang_profile['Section personal']);
 		define('PUN_ACTIVE_PAGE', 'profile');
-		require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+		require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 		$page = $params->get('section');
 
 ?>
@@ -1209,7 +1209,7 @@ else
 
 		$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_common['Profile'], $lang_profile['Section messaging']);
 		define('PUN_ACTIVE_PAGE', 'profile');
-		require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+		require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 		$page = $params->get('section');
 
 ?>
@@ -1277,7 +1277,7 @@ else
 
 		$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_common['Profile'], $lang_profile['Section personality']);
 		define('PUN_ACTIVE_PAGE', 'profile');
-		require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+		require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 		$page = $params->get('section');
 
 ?>
@@ -1347,7 +1347,7 @@ else
 	{
 		$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_common['Profile'], $lang_profile['Section display']);
 		define('PUN_ACTIVE_PAGE', 'profile');
-		require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+		require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 		$page = $params->get('section');
 
 ?>
@@ -1453,7 +1453,7 @@ else
 	{
 		$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_common['Profile'], $lang_profile['Section privacy']);
 		define('PUN_ACTIVE_PAGE', 'profile');
-		require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+		require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 		$page = $params->get('section');
 
 ?>
@@ -1521,7 +1521,7 @@ else
 
 		$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_common['Profile'], $lang_profile['Section admin']);
 		define('PUN_ACTIVE_PAGE', 'profile');
-		require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+		require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 		$page = $params->get('section');
 
 ?>
@@ -1669,5 +1669,5 @@ else
 </div>
 <?php
 
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+	require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
 }

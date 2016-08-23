@@ -17,7 +17,7 @@ require PUN_ROOT.'lang/'.$pun_user['language'].'/help.php';
 
 $page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_help['Help']);
 define('PUN_ACTIVE_PAGE', 'help');
-require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/header.php';
 
 ?>
 <h2><span><?php echo $lang_help['BBCode'] ?></span></h2>
@@ -144,4 +144,4 @@ foreach ($smiley_groups as $smiley_img => $smiley_texts)
 	</div>
 </div>
 <?php
-require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+require 'addons/fluxbb/themes/'.$session->theme.'/fluxbb/footer.php';
