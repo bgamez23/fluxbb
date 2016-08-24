@@ -363,9 +363,9 @@ else if (isset($_POST['add_edit_group']))
 	generate_quickjump_cache($group_id);
 
 	if ($_POST['mode'] == 'edit')
-		redirect('&action=admin_groups', $lang_admin_groups['Group edited redirect']);
+		redirect('?module=fluxbb&action=admin_groups', $lang_admin_groups['Group edited redirect']);
 	else
-		redirect('&action=admin_groups', $lang_admin_groups['Group added redirect']);
+		redirect('?module=fluxbb&action=admin_groups', $lang_admin_groups['Group added redirect']);
 }
 
 
@@ -392,7 +392,7 @@ else if (isset($_POST['set_default_group']))
 
 	generate_config_cache();
 
-	redirect('&action=admin_groups', $lang_admin_groups['Default group redirect']);
+	redirect('?module=fluxbb&action=admin_groups', $lang_admin_groups['Default group redirect']);
 }
 
 
@@ -430,7 +430,7 @@ else if (isset($_GET['del_group']))
 			// Don't let users be promoted to this group
 			$db->query('UPDATE '.$db->prefix.'groups SET g_promote_next_group=0 WHERE g_promote_next_group='.$group_id) or error('Unable to remove group as promotion target', __FILE__, __LINE__, $db->error());
 
-			redirect('&action=admin_groups', $lang_admin_groups['Group removed redirect']);
+			redirect('?module=fluxbb&action=admin_groups', $lang_admin_groups['Group removed redirect']);
 		}
 		else
 		{

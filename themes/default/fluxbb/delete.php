@@ -56,7 +56,7 @@ if (isset($_POST['delete']))
 		delete_topic($cur_post['tid']);
 		update_forum($cur_post['fid']);
 
-		redirect('&action=viewforum&id='.$cur_post['fid'], $lang_delete['Topic del redirect']);
+		redirect('?module=fluxbb&action=viewforum&id='.$cur_post['fid'], $lang_delete['Topic del redirect']);
 	}
 	else
 	{
@@ -68,7 +68,7 @@ if (isset($_POST['delete']))
 		$result = $db->query('SELECT id FROM '.$db->prefix.'posts WHERE topic_id='.$cur_post['tid'].' AND id < '.$id.' ORDER BY id DESC LIMIT 1') or error('Unable to fetch post info', __FILE__, __LINE__, $db->error());
 		$post_id = $db->result($result);
 
-		redirect('&action=viewtopic&pid='.$post_id.'#p'.$post_id, $lang_delete['Post del redirect']);
+		redirect('?module=fluxbb&action=viewtopic&pid='.$post_id.'#p'.$post_id, $lang_delete['Post del redirect']);
 	}
 }
 

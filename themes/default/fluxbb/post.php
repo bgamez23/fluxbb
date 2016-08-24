@@ -430,7 +430,7 @@ if ($params->get('form_sent'))
 			$db->query('UPDATE '.$db->prefix.'online SET last_post='.$now.' WHERE ident=\''.$db->escape(get_remote_address()).'\'' ) or error('Unable to update user', __FILE__, __LINE__, $db->error());
 		}
 
-		redirect('&action=viewtopic&pid='.$new_pid.'#p'.$new_pid, $lang_post['Post redirect']);
+		redirect('?module=fluxbb&action=viewtopic&pid='.$new_pid.'#p'.$new_pid, $lang_post['Post redirect']);
 	}
 }
 

@@ -291,9 +291,9 @@ else if (isset($_POST['add_edit_ban']))
 	generate_bans_cache();
 
 	if ($_POST['mode'] == 'edit')
-		redirect('&action=admin_bans', $lang_admin_bans['Ban edited redirect']);
+		redirect('?module=fluxbb&action=admin_bans', $lang_admin_bans['Ban edited redirect']);
 	else
-		redirect('&action=admin_bans', $lang_admin_bans['Ban added redirect']);
+		redirect('?module=fluxbb&action=admin_bans', $lang_admin_bans['Ban added redirect']);
 }
 
 // Remove a ban
@@ -313,7 +313,7 @@ else if (isset($_GET['del_ban']))
 
 	generate_bans_cache();
 
-	redirect('&action=admin_bans', $lang_admin_bans['Ban removed redirect']);
+	redirect('?module=fluxbb&action=admin_bans', $lang_admin_bans['Ban removed redirect']);
 }
 
 // Find bans

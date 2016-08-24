@@ -52,7 +52,7 @@ else if ($action == 'markread')
 	// Reset tracked topics
 	set_tracked_topics(null);
 
-	redirect('&action=index', $lang_misc['Mark read redirect']);
+	redirect('?module=fluxbb&action=index', $lang_misc['Mark read redirect']);
 }
 
 
@@ -70,7 +70,7 @@ else if ($action == 'markforumread')
 	$tracked_topics['forums'][$fid] = time();
 	set_tracked_topics($tracked_topics);
 
-	redirect('&action=viewforum&id='.$fid, $lang_misc['Mark forum read redirect']);
+	redirect('?module=fluxbb&action=viewforum&id='.$fid, $lang_misc['Mark forum read redirect']);
 }
 
 
@@ -129,7 +129,7 @@ else if (isset($_GET['email']))
 
 		$db->query('UPDATE '.$db->prefix.'users SET last_email_sent='.time().' WHERE id='.$pun_user['id']) or error('Unable to update user', __FILE__, __LINE__, $db->error());
 
-		redirect('&action=index', $lang_misc['Email sent redirect']);
+		redirect('?module=fluxbb&action=index', $lang_misc['Email sent redirect']);
 	}
 
 
@@ -266,7 +266,7 @@ else if (isset($_GET['report']))
 
 		$db->query('UPDATE '.$db->prefix.'users SET last_report_sent='.time().' WHERE id='.$pun_user['id']) or error('Unable to update user', __FILE__, __LINE__, $db->error());
 
-		redirect('&action=viewforum&id='.$forum_id, $lang_misc['Report redirect']);
+		redirect('?module=fluxbb&action=viewforum&id='.$forum_id, $lang_misc['Report redirect']);
 	}
 
 	// Fetch some info about the post, the topic and the forum
@@ -346,7 +346,7 @@ else if ($action == 'subscribe')
 
 		$db->query('INSERT INTO '.$db->prefix.'topic_subscriptions (user_id, topic_id) VALUES('.$pun_user['id'].' ,'.$topic_id.')') or error('Unable to add subscription', __FILE__, __LINE__, $db->error());
 
-		redirect('&action=viewtopic&id='.$topic_id, $lang_misc['Subscribe redirect']);
+		redirect('?module=fluxbb&action=viewtopic&id='.$topic_id, $lang_misc['Subscribe redirect']);
 	}
 
 	if ($forum_id)
@@ -365,7 +365,7 @@ else if ($action == 'subscribe')
 
 		$db->query('INSERT INTO '.$db->prefix.'forum_subscriptions (user_id, forum_id) VALUES('.$pun_user['id'].' ,'.$forum_id.')') or error('Unable to add subscription', __FILE__, __LINE__, $db->error());
 
-		redirect('&action=viewforum&id='.$forum_id, $lang_misc['Subscribe redirect']);
+		redirect('?module=fluxbb&action=viewforum&id='.$forum_id, $lang_misc['Subscribe redirect']);
 	}
 }
 
@@ -391,7 +391,7 @@ else if ($action == 'unsubscribe')
 
 		$db->query('DELETE FROM '.$db->prefix.'topic_subscriptions WHERE user_id='.$pun_user['id'].' AND topic_id='.$topic_id) or error('Unable to remove subscription', __FILE__, __LINE__, $db->error());
 
-		redirect('&action=viewtopic&id='.$topic_id, $lang_misc['Unsubscribe redirect']);
+		redirect('?module=fluxbb&action=viewtopic&id='.$topic_id, $lang_misc['Unsubscribe redirect']);
 	}
 
 	if ($forum_id)
@@ -405,7 +405,7 @@ else if ($action == 'unsubscribe')
 
 		$db->query('DELETE FROM '.$db->prefix.'forum_subscriptions WHERE user_id='.$pun_user['id'].' AND forum_id='.$forum_id) or error('Unable to remove subscription', __FILE__, __LINE__, $db->error());
 
-		redirect('&action=viewforum&id='.$forum_id, $lang_misc['Unsubscribe redirect']);
+		redirect('?module=fluxbb&action=viewforum&id='.$forum_id, $lang_misc['Unsubscribe redirect']);
 	}
 }
 
