@@ -532,7 +532,7 @@ function generate_avatar_markup($user_id)
 
 		if (file_exists(PUN_ROOT.$path) && $img_size = getimagesize(PUN_ROOT.$path))
 		{
-			$avatar_markup = '<img src="'.pun_htmlspecialchars(get_base_url(true).'/'.$path.'?m='.filemtime(PUN_ROOT.$path)).'" '.$img_size[3].' alt="" />';
+			$avatar_markup = '<img src="'.pun_htmlspecialchars(get_base_url(true).'/'.PUN_ROOT.$path.'?m='.filemtime(PUN_ROOT.$path)).'" '.$img_size[3].' alt="" />';
 			break;
 		}
 	}
@@ -891,7 +891,7 @@ function message($message, $no_back_link = false, $http_status = null)
 	{
 		$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_common['Info']);
 		define('PUN_ACTIVE_PAGE', 'index');
-		require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/header.php';
+		require 'addons/fluxbb/themes/'.$pun_config['flux_theme'].'/fluxbb/header.php';
 	}
 
 ?>
@@ -907,7 +907,7 @@ function message($message, $no_back_link = false, $http_status = null)
 </div>
 <?php
 
-	require 'addons/fluxbb/themes/'.Flux::config('ThemeName').'/fluxbb/footer.php';
+	require 'addons/fluxbb/themes/'.$pun_config['flux_theme'].'/fluxbb/footer.php';
 }
 
 

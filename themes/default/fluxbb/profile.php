@@ -123,7 +123,7 @@ if ($action == 'upload_avatar' || $action == 'upload_avatar2')
 		else
 			message($lang_profile['Unknown failure']);
 
-		redirect('&action=profile&section=personality&amp;id='.$id, $lang_profile['Avatar upload redirect']);
+		redirect('?module=fluxbb&action=profile&section=personality&amp;id='.$id, $lang_profile['Avatar upload redirect']);
 	}
 
 	$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_common['Profile'], $lang_profile['Upload avatar']);
@@ -167,7 +167,7 @@ else if ($action == 'delete_avatar')
 
 	delete_avatar($id);
 
-	redirect('&action=profile&section=personality&amp;id='.$id, $lang_profile['Avatar deleted redirect']);
+	redirect('?module=fluxbb&action=profile&section=personality&amp;id='.$id, $lang_profile['Avatar deleted redirect']);
 }
 
 
@@ -211,7 +211,7 @@ else if ($params->get('update_group_membership'))
 		}
 	}
 
-	redirect('&action=profile&section=admin&amp;id='.$id, $lang_profile['Group membership redirect']);
+	redirect('?module=fluxbb&action=profile&section=admin&amp;id='.$id, $lang_profile['Group membership redirect']);
 }
 
 
@@ -252,7 +252,7 @@ else if ($params->get('update_forums'))
 		}
 	}
 
-	redirect('&action=profile&section=admin&amp;id='.$id, $lang_profile['Update forums redirect']);
+	redirect('?module=fluxbb&action=profile&section=admin&amp;id='.$id, $lang_profile['Update forums redirect']);
 }
 
 
@@ -270,10 +270,10 @@ else if ($params->get('ban'))
 	if ($db->num_rows($result))
 	{
 		$ban_id = $db->result($result);
-		redirect('&action=admin_bans&edit_ban='.$ban_id.'&amp;exists', $lang_profile['Ban redirect']);
+		redirect('?module=fluxbb&action=admin_bans&edit_ban='.$ban_id.'&amp;exists', $lang_profile['Ban redirect']);
 	}
 	else
-		redirect('&action=admin_bans&add_ban='.$id, $lang_profile['Ban redirect']);
+		redirect('?module=fluxbb&action=admin_bans&add_ban='.$id, $lang_profile['Ban redirect']);
 }
 
 
@@ -362,7 +362,7 @@ else if ($params->get('delete_user') || $params->get('delete_user_comply'))
 
 		generate_users_info_cache();
 
-		redirect('&action=index', $lang_profile['User delete redirect']);
+		redirect('?module=fluxbb&action=index', $lang_profile['User delete redirect']);
 	}
 
 	$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_common['Profile'], $lang_profile['Confirm delete user']);
@@ -699,7 +699,7 @@ else if ($params->get('form_sent'))
 			generate_bans_cache();
 	}
 
-	redirect('&action=profile&section='.$section.'&amp;id='.$id, $lang_profile['Profile redirect']);
+	redirect('?module=fluxbb&action=profile&section='.$section.'&amp;id='.$id, $lang_profile['Profile redirect']);
 }
 
 

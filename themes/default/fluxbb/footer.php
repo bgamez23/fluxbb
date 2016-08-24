@@ -153,7 +153,7 @@ ob_end_clean();
 $db->close();
 
 // Spit out the page
-echo $tpl_main;
+exit($tpl_main);
 ?>
 </div>
 <?php

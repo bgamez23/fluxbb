@@ -36,7 +36,7 @@ if (isset($_POST['zap_id']))
 		$db->query('DELETE FROM '.$db->prefix.'reports WHERE zapped <= '.$zapped_threshold) or error('Unable to delete old read reports', __FILE__, __LINE__, $db->error());
 	}
 
-	redirect('&action=admin_reports', $lang_admin_reports['Report zapped redirect']);
+	redirect('?module=fluxbb&action=admin_reports', $lang_admin_reports['Report zapped redirect']);
 }
 
 

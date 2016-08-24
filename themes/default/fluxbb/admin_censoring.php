@@ -34,7 +34,7 @@ if (isset($_POST['add_word']))
 
 	generate_censoring_cache();
 
-	redirect('&action=admin_censoring', $lang_admin_censoring['Word added redirect']);
+	redirect('?module=fluxbb&action=admin_censoring', $lang_admin_censoring['Word added redirect']);
 }
 
 // Update a censor word
@@ -58,7 +58,7 @@ else if (isset($_POST['update']))
 
 	generate_censoring_cache();
 
-	redirect('&action=admin_censoring', $lang_admin_censoring['Word updated redirect']);
+	redirect('?module=fluxbb&action=admin_censoring', $lang_admin_censoring['Word updated redirect']);
 }
 
 // Remove a censor word
@@ -76,7 +76,7 @@ else if (isset($_POST['remove']))
 
 	generate_censoring_cache();
 
-	redirect('&action=admin_censoring',  $lang_admin_censoring['Word removed redirect']);
+	redirect('?module=fluxbb&action=admin_censoring',  $lang_admin_censoring['Word removed redirect']);
 }
 
 $page_title = array(pun_htmlspecialchars($pun_config['o_board_title']), $lang_admin_common['Admin'], $lang_admin_common['Censoring']);
